@@ -5,14 +5,14 @@
 
 body {
   font-family: 'Merriweather', serif;
-  background color: #f9fafc;
+  background color: #F1EFEF;
 }
 
 .navbar{
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #FFF;
+  background-color: #EEEEEE;
 
 }
 
@@ -24,12 +24,12 @@ body {
   width: 100%;
 }
 
-.nav__item {
-  background-image: linear-gradient( <!--SET OF COLOR TO USE LG-->
+.button__primary {
+  background-color:#C70039 ; linear-gradient( <!--SET OF COLOR TO USE LG-->
     to right,
-    #ff512f 0%,
-      #dd2476 51%,
-      #ff512f 100%
+    #FF6AC2 0%,
+      #445D48 51%,
+      #B2533E 100%
 );
     color: #fff;
     border: none;
@@ -43,19 +43,104 @@ body {
   }
 }
 
+.container {
+  max-width: 100%;
+  padding:20px;
+  margin:0 auto;
+}
 
-  @media (min-width: 768px){ <!--phone width-->
+.hero__image__container {  <!--hero__image__container is parent heroimg is child both need set-->
+  width: 100%;
+  }
+  .hero__image{
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 /25%);
+
+  }
+  .hero__text {
+    font-weight: bolder;
+    font-size: 32px;
+    margin: 20px 0;
+    color: #1D3557;
+
+  }
+  .food__card__description{
+    padding: 15px;
+
+  }
+  .food__card{
+    background-color: #F1EFEF;
+  }
+  .food__card__image__container{
+    width: 100%;
+  }
+  .food__image{
+  border-radius: 8px 8px 0 0;
+  width:100%;
+}
+  .explore__menu__text {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800px;
+    color: #1D3557;
+  }
+
+
+
+  @media (min-width: 768px){            <!--phone width-->
+    .explore__menu__lists{
+      display: flex;
+      gap:15px;
+    }
+   .explore__menu__gradient__bg{
+  position:absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image:    #D80032;
+    to right,
+    #D80032 0%,
+    #F78CA2 51%,
+    #EE9322 100%
+    );
+  }
+  z-index: -3;
+  transform: skewY(-5deg);
+  <!--zi it helps to go backgroundof the image
+  tilting liky y shape background tnfrm and skewy style used-->
+    #pizza__card{
+      margin-top: -20px;
+      margin-bottom: 30px;
+    }
+
     .navbar{
       justify-content: space-between;
       padding: 10px 30px;
     }
   }
+  .hero__container{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
+
   @mediab(min-width: 1024px) {
+    .container {
+      max-width: 70%;
+    }
+
     .navbar__brand {
       width: 150px;
     }
-    .nav__item {
+    .button_primary {
       padding: 20px;
       font-size: 20px;
+  }
+  .hero__description{
+    width: 100%;
     }
   }
